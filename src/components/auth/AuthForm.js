@@ -39,7 +39,7 @@ const Footer = styled.div`
   }
 `;
 
-export default function AuthForm({ type }) {
+export default function AuthForm() {
   const router = useRouter();
 
   return (
