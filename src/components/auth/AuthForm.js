@@ -43,20 +43,20 @@ const Footer = styled.div`
 export default function AuthForm() {
   const router = useRouter();
 
-  const [users, setUsers] = useState([]);
+  const [users, setUsers] = useState(null);
 
   useEffect(() => {
     const fetchUsers = async () => {
       const res = await fetch("/api/users");
       const { users } = await res.json();
       setUsers(users);
+      console.log(users)
     };
     fetchUsers();
   }, []);
 
   function onSubmit(e) {
     e.preventDefault();
-
     const newUser = fetch("/api/users", {
       method: "POST",
       headers: {
