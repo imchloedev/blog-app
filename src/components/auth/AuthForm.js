@@ -42,7 +42,8 @@ const Footer = styled.div`
 
 export default function AuthForm() {
   const router = useRouter();
-
+  console.log(router);
+  
   const [users, setUsers] = useState(null);
 
   useEffect(() => {
